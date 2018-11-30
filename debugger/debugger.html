@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Debugger - Tiffany Zhu</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Overpass|Permanent+Marker" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" type="text/css" href="../assets/stylesheet.css">
+
+</head>
+
+
+  <body>
+
+    <a href="../otherpages/index2.html"><div class="name-title">Tiffany Zhu</div></a>
+        <div class="navbar">
+        <div class="dropdown">
+        <button class="dropbtn">Work</button>
+            <div class="dropdown-content">
+              <a href="../knowyourself/knowyourself.html">Project Know Yourself</a>
+              <a href="../debugger/debugger.html">Debugger</a>
+              <a href="#">Chronicle</a>
+            </div>
+        </div>
+        <a href="../otherpages/about.html">
+            <div>About</div>
+        </a>
+    </div>
+
+    <img src="../images/debugger/debugger-hero.png" class="hero-image">
+
+    <div id="page-wrap">
+        <div id="sidebar" class="sticky-top">
+            <ul>
+                <li><a href="#my-role">00 My Role</a></li>
+                <li><a href="#context-problem">01 Context and Problem</a></li>
+                <li><a href="#solution">02 Solution</a></li>
+                <li><a href="#process">03 Process</a></li>
+                <li><a href="#learnings">04 Learnings</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <h2 id="my-role">
+                00 My Role
+            </h2>
+
+                <p>
+                User interviews, usage reporting, user stories, sketches, UI design feedback (final design executed by K. Babula), project management, proposal creation.
+                </p>
+                <br>
+                <p>
+                A note on my involvement: In the past year, I had noticed a pattern of customers giving feedback that the Debugger was difficult to use. I found their use case to be compelling and approached one of our lead designers to explore this as a hack week project. The problem was ultimately large enough that we worked past hack week for four more weeks on this project.
+                </p>
+                <br>
+
+            <h2 id="context-problem">
+                01 Context and Problem
+            </h2>
+
+            <p>
+                Segment is a data collection and transformation tool. The clearest analogy is that the Segment product acts as a train system for data and the Segment web app is Grand Central station. Trains of data are coming from websites and mobile apps, stopping at Grand Central, and heading to their next destinations. Each passenger is a packet of data.
+            </p>
+            <br>
+            <p>
+                Customers use the Debugger feature to identify problems with the data trains that are coming in (e.g. maybe it’s missing 1 or 2 passengers) and the code that is being sent out (e.g. passengers are getting on the wrong trains and going to incorrect destinations).
+            </p>
+            <br>
+            <p>
+                We had gotten a lot of feedback in the past year that the Debugger experience had become increasingly poor. This made sense since it had not been fundamentally redesigned since 2014. This feedback reflected the shared sentiment that improving the Debugger would have a positive impact on our customers’ workflow and the value they derived from Segment. The Debugger, though a less "sexy" product feature, is foundational and a bad experience with it will inevitably result in broken workflows, frustrated users, an increase in tickets, and potentially mistrust in our product. This is an essential tool for diagnosing issues, building credibility with our users by giving them access to all data that flows through Segment.
+            </p>
+            <h2 id="solution">
+                02 Solution
+            </h2>
+
+            <p>
+                Credit given to K. Babula who did the heavy lifting on UI realization. I worked closely with her to provide feedback and build design components. We pitched the below designs to our VP of Engineering and Head of Product.
+                <br>
+                <br>
+                <img src="../images/debugger/debugger-solution-1.png" class="image">
+                <br>
+                <br>
+                <br>
+                <img src="../images/debugger/debugger-solution-2.png" class="image">
+                </p>
+                <br>
+
+
+
+
+
+
+<!--      <div class="w3-content w3-display-container">
+        <img class="mySlides" src="../images/debugger/debugger-solution-1.png">
+        <img class="mySlides" src="../images/debugger/debugger-solution-2.png">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>-->
+
+
+            <br>
+            <ol>
+              <li>Visually surface errors.</li>
+              <li>Visually represent downstream destinations for data.</li>
+              <li>More granularity in event volume data.</li>
+              <li>Adding a new Filter function.</li>
+              <li>Adding the capability to run boolean searches (stacking keyword criteria).</li>
+              <li>Zero state when no event is selected from the left.</li>
+            </ol>
+
+            <h4>Shipped Version</h4>
+              <p><img src="../images/debugger/shipped.gif" class="image"> </p>
+
+
+            <h2 id="process">
+                03 Process
+            </h2>
+
+            <p>
+                We set up 10 feedback sessions with our technical support team and customers who previously had given some form of feedback on the Debugger. We asked them to discuss how they used the tool, what their goals were, and what were particular pain-points. We looked for the same information when reviewing old support tickets for anecdotal feedback.
+            </p>
+            <br>
+            <h3>3 Main Takeaways:</h3>
+            <p>
+               <ol>
+                  <li>Search functionality: more advanced event data search abilities;</li>
+                  <li>Information density: surface more relevant information in event rows and in event details;</li>
+                  <li>Better UI: an improved debugging experience with "jobs to be done" flows in mind.</li>
+               </ol>
+           </p>
+            <br>
+            <h3>Exploration, Inspiration, Iteration</h3>
+            <p>
+               We found inspiration in some unconventional places like JIRA and Gmail. Since there was no tool exactly like the Debugger out there, we instead focused on tools that solved for themes similar to our takeaways: tools that had heavy information density and allowed users to review a high volume of data in a short amount of time. Then we did some whiteboarding and ran through the crazy 8's exercise to generate ideas. You can see some brainstorming and initial sketches below.
+           </p>
+            <br>
+
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="../images/debugger/debugger-process-1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="../images/debugger/debugger-process-2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="../images/debugger/debugger-process-3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="../images/debugger/debugger-process-4.png" style="width:100%">
+        </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+
+        <br>
+        <br>
+        <p>
+        This is a gallery of various design iterations. We fleshed out several different ideas to see which option (or combinations of options) best mapped the journey of data with the space we had.
+       </p>
+        <br>
+
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="../images/debugger/debugger-iteration-1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="../images/debugger/debugger-iteration-2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="../images/debugger/debugger-iteration-3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="../images/debugger/debugger-iteration-4.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+            <h2 id="learnings">
+                04 Learnings
+            </h2>
+
+            <p>
+                This was an incredible learning experience for me, as this was the first true project I got to work on for a real business case with a product designer. A few things I learned:
+            </p>
+            <h4>1. Creating themes of feedback and personas really is key to keeping your project focused on the goal.</h4>
+            <p>
+                It was easy to get caught up in the dozens, even hundreds of pieces of feedback, cluttering the design of the Debugger, but being reminded of the identified Jobs to Be Done allowed us to make smart decisions.
+            </p>
+            <h4>2. Setting metrics for success for a project largely based on sentiment and delighting the customer is quite nuanced.</h4>
+            <p>
+                We discussed multiple options from calculating visitor traffic before and after the redesign, to launching NPS scores within the app. We chose to do post-mortem follow-ups with both customers and internal users, as resources were too tight to implement a Satisfaction score.
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+
+    <div class="connect">
+        <div>Let's Connect:</div>
+        <a href="https://www.linkedin.com/in/tiffanyzhu" target="_blank"><img src="../images/general/linkedin.png" id="icon1"></a>
+        <a href="<a href="mailto:tiffanyzhu729@gmail.com" target="_blank"><img src="../images/general/gmail.png" id="icon2"></a>
+    </div>
+          <br>
+          <br>
+          <br>
+        </div>
+
+    </div>
+
+<script type="text/javascript" src="../assets/main.js"></script>
+
+
+
+  </body>
+
+
+</html>

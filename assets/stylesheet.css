@@ -1,0 +1,333 @@
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Overpass', Sans-Serif;
+}
+
+h1, iframe {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+h2, h3, h4 {
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    width: 50%;
+    margin: 50px auto;
+}
+
+p, ol {
+    font-family: 'Overpass', Sans-Serif;
+    width: 50%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+iframe {
+  width: 100%;
+}
+
+.connect {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.emoji {
+    height: 40px;
+    width: 40px;
+}
+
+.name-title {
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'Permanent Marker', Cursive;
+    font-size: 5vw;
+    margin-left: 20px;
+}
+
+.navbar {
+    display: flex;
+    float: right;
+    font-family: 'Permanent Marker', Cursive;
+    font-size: 3vw;
+    padding-top: 20px;
+    margin-right: 20px;
+}
+
+.tagline {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    width: 50%;
+    font-size: 3vw;
+    font-family: 'Oswald', sans-serif;
+}
+
+.project {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.link {
+    font-weight: bold;
+}
+
+.hero-image {
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.monitor {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+    display: inline;
+}
+
+.imtip {
+  position: absolute;
+  bottom: 0;
+  right: 50;
+  width: 40%;
+
+}
+
+/* images contained in individual portfolio projects*/
+.image {
+    width: 120%;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.header {
+    font-family: 'Oswald', sans-serif;
+    text-align: right;
+}
+
+.carousel-item {
+    width: 60%
+    margin: 0 auto;
+    text-align: right;
+}
+
+/* about me page columns left and right*/
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left {
+  width: 25%;
+  text-align: right;
+}
+
+.right {
+  width: 75%;
+  margin-top: 15px;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*for the Let's Connect bar at the bottom of each page */
+#icon1, #icon2 {
+    width: 40px;
+    display: inline-block;
+  }
+
+#headshot {
+    width: 50%;
+    text-align: right;
+}
+
+
+#content {
+    width: 80%;
+    float: right;
+}
+
+#sidebar {
+    width: 20%;
+    float: left;
+    font-family: 'Permanent Marker', Cursive;
+}
+
+/* The dropdown container */
+.dropdown {
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 3vw;
+  border: none;
+  outline: none;
+  color: black;
+  padding-right: 4vw;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover, .dropdown:hover .dropbtn {
+    text-decoration: underline;
+}
+
+/* W3SCHOOLS SLIDESHOW CODE*/
+
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 45vw;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev, .next {
+  background-color: #A9A9A9;
+  color: black;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .header {
+      text-align: center;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .sticky-top {
+      position: relative;
+      margin-top: 0 !important;
+    }
+
+    #sidebar {
+        width: 100%;
+      }
+
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {...}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+
+
+
+
+
